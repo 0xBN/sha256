@@ -1,6 +1,70 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  background-color: #f4f4f4;
+  background-color: #0a0a0a; /* Darker shade for more depth */
+  color: #0f0; /* Classic green-on-black terminal color */
   text-align: center;
-  padding: 50px;
-  font-family: 'Arial', sans-serif;
+  padding: 10px;
+  font-family: 'Courier New', monospace; /* Monospaced font for that classic code look */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 90%; /* Slightly reduced for a better look on small screens */
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+}
+
+input,
+button,
+#hashOutput {
+  word-wrap: break-word;
+  background-color: #222; /* Slightly lighter for contrast */
+  color: #0f0; /* Text color */
+  border: 1px solid #333; /* Subtle borders for depth */
+  border-radius: 4px;
+  width: 100%;
+  max-width: 500px;
+  padding: 12px;
+  font-size: 16px;
+  outline: none; /* Remove chrome's outline */
+}
+
+input {
+  background-color: #121212; /* Even darker for input to stand out */
+  border-color: #0f0; /* Matching the text color */
+}
+
+button {
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #333; /* Subtle difference from input */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition for interaction */
+}
+
+button:hover,
+button:focus {
+  background-color: #444; /* Slightly lighter on hover */
+  transform: scale(1.05); /* Slight scale for feedback */
+}
+
+@media (min-width: 768px) {
+  body {
+    padding: 50px; /* More padding on larger screens */
+  }
+  input,
+  button {
+    font-size: 18px; /* Larger font for readability */
+  }
 }

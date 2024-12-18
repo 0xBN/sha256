@@ -2,13 +2,17 @@
 <html>
 
 <head>
-  <title>Hello World</title>
+  <title>SHA-256 Hash Generator</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body>
-  <h1>Hello World</h1>
-  <p>This is a GitHub Pages site.</p>
+  <h1>SHA-256 Hash Generator</h1>
+  <div class="container">
+    <input id="textInput" type="text" placeholder="Enter text here..." oninput="generateHash()">
+    <p id="hashOutput">Hash will appear here...</p>
+    <button onclick="copyToClipboard()">Copy Hash</button>
+  </div>
   <script src="script.js"></script>
 </body>
 
