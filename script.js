@@ -44,7 +44,7 @@ function copyToClipboard(elementId) {
         console.error('Failed to copy text: ', err);
       });
   } else {
-    console.log('No text to copy.');
+    // console.log('No text to copy.');
   }
 }
 
@@ -65,20 +65,20 @@ function copyToClipboardAndPaste(elementId) {
   const textElement = document.getElementById(elementId);
   const textToCopy = textElement.textContent; // Ensure this is getting the correct text
 
-  console.log('Copying text:', textToCopy); // Check what is being copied
+  // console.log('Copying text:', textToCopy); // Check what is being copied
 
   if (textToCopy && textToCopy !== 'Hash will appear here...') {
     navigator.clipboard
       .writeText(textToCopy)
       .then(() => {
         showCopyNotification();
-        console.log('Text copied successfully');
+        // console.log('Text copied successfully');
 
         document.getElementById('textInput').value = textToCopy;
-        console.log(
-          'Pasted text into input:',
-          document.getElementById('textInput').value
-        ); // Verify the paste operation
+        // console.log(
+        //   'Pasted text into input:',
+        //   document.getElementById('textInput').value
+        // ); // Verify the paste operation
 
         generateHash(); // This should re-hash the newly pasted text
       })
@@ -86,6 +86,6 @@ function copyToClipboardAndPaste(elementId) {
         console.error('Failed to copy text: ', err);
       });
   } else {
-    console.log('No text to copy.');
+    // console.log('No text to copy.');
   }
 }
