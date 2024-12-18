@@ -18,8 +18,25 @@ body {
   font-size: 1.5rem;
 }
 
+h1 {
+  width: 75vw;
+  font-size: 4vw;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 5vw; /* Slightly larger on smaller screens */
+  }
+}
+
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 3vw; /* Slightly smaller on larger screens to prevent overly large text */
+  }
+}
+
 .container {
-  padding-top: 1.5rem;
   width: 90%;
   display: flex;
   flex-direction: column;
