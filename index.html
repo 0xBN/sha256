@@ -12,8 +12,11 @@
   <h1>SHA-256 Hash Generator</h1>
   <div class="container">
     <input id="textInput" type="text" autocapitalize="none" placeholder="Enter text here..." oninput="generateHash()">
-    <p id="hashOutput" onclick="copyToClipboard('hashOutput')" style="cursor: pointer;" role="button" tabindex="0">Hash
-      will appear here...</p>
+    <!-- <p id="hashOutput" onclick="copyToClipboard('hashOutput')" style="cursor: pointer;" role="button" tabindex="0">Hash
+      will appear here...</p> -->
+    <p id="hashOutput" onclick="copyToClipboardAndPaste('hashOutput')" style="cursor: pointer;" role="button"
+      tabindex="0">Hash will appear here...</p>
+
     <textarea id="textArea" placeholder="Manipulate text here..."></textarea>
     <button onclick="copyToClipboard('textArea')">Copy Text</button>
   </div>
